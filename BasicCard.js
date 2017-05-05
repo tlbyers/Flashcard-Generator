@@ -5,7 +5,6 @@ var BasicCard = function(front,back){
 
 // BasicCard.prototype.printCardFront=function(){
 //   console.log(this.front);
-
 // };
 
 // BasicCard.prototype.printCardBack=function(){

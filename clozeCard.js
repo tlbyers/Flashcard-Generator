@@ -12,19 +12,19 @@ var newCloze=new clozeCard();
 
 //Questions for flashcards
 
-var firstPresidentCloze=new clozeCard("George Washington was the first president of the United States","George Washington");
+var firstPresidentCloze=new clozeCard("George Washington was the first president of the United States","GEORGE WASHINGTON");
 firstPresidentCloze.partial=new clozeCard("...was the first president of the United States.");
 firstPresidentCloze.fullText=new clozeCard("George Washington was the first president of the United States.");
 
-var currentPresidentCloze=new clozeCard("Who is the current president of the United States?","Donald Trump");
+var currentPresidentCloze=new clozeCard("Who is the current president of the United States?","DONALD TRUMP");
 currentPresidentCloze.partial= new clozeCard("...is the current president of the United States.");
 currentPresidentCloze.fullText=new clozeCard("Donald Trump is the current president of the United States.");
 
-var leaderCloze=new clozeCard("Who's the leader of the club that is made for you and me?","Mickey Mouse");
+var leaderCloze=new clozeCard("Who's the leader of the club that is made for you and me?","MICKEY MOUSE");
 leaderCloze.partial=new clozeCard("...is the leader of the club that is made for you and me.");
 leaderCloze.fullText=new clozeCard("Mickey Mouse is the leader of the club that is made for you and me.");
 
-var dinosaurCloze=new clozeCard("Who is the lovable purple dinosaur?","Barney");
+var dinosaurCloze=new clozeCard("Who is the lovable purple dinosaur?","BARNEY");
 dinosaurCloze.partial=new clozeCard("...is the lovable purple dinosaur.");
 dinosaurCloze.fullText=new clozeCard("Barney is the lovable purple dinosaur.");
 
@@ -71,10 +71,10 @@ inquirer.prompt([
     	console.log("==============================================");
     	console.log("");
     
-    	var firstPresident=new BasicCard("Who was the first president of the United States?","George Washington");
-  		var currentPresident=new BasicCard("Who is the current president of the United States?","Donald Trump");
-  		var leader=new BasicCard("Who's the leader of the club that is made for you and me?","Mickey Mouse");
-  		var dinosaur=new BasicCard("Who is the lovable purple dinosaur?","Barney");
+    	var firstPresident=new BasicCard("Who was the first president of the United States?","GEORGE WASHINGTON");
+  		var currentPresident=new BasicCard("Who is the current president of the United States?","DONALD TRUMP");
+  		var leader=new BasicCard("Who's the leader of the club that is made for you and me?","MICKEY MOUSE");
+  		var dinosaur=new BasicCard("Who is the lovable purple dinosaur?","BARNEY");
           inquirer.prompt([
             {
              name:"question",
@@ -82,7 +82,7 @@ inquirer.prompt([
              name:"answer"
             }
             ]).then(function(answers){
-              if(answers.answer===firstPresident.back){
+              if(answers.answer.toUpperCase()===firstPresident.back){
                console.log("That's right! Well Done!");
                console.log("---------------------------------------------------------------------------------------------"); 
               }
@@ -103,7 +103,7 @@ inquirer.prompt([
              name:"answer"
             }
             ]).then(function(answers){
-              if(answers.answer===currentPresident.back){
+              if(answers.answer.toUpperCase().toUpperCase()===currentPresident.back){
                console.log("That's right! Well Done!");
                console.log("---------------------------------------------------------------------------------------------"); 
               }
@@ -124,7 +124,7 @@ inquirer.prompt([
              name:"answer"
             }
             ]).then(function(answers){
-              if(answers.answer===leader.back){
+              if(answers.answer.toUpperCase().toUpperCase()===leader.back){
                console.log("That's right! Well Done!");
                console.log("---------------------------------------------------------------------------------------------"); 
               }
@@ -144,7 +144,7 @@ inquirer.prompt([
              name:"answer"
             }
             ]).then(function(answers){
-              if(answers.answer===dinosaur.back){
+              if(answers.answer.toUpperCase()===dinosaur.back){
                console.log("That's right! Well Done!");
                console.log("---------------------------------------------------------------------------------------------"); 
               }
@@ -174,7 +174,7 @@ inquirer.prompt([
 	    	 name:"answer"
 	    	}
 	    	]).then(function(answers){
-	    		if(answers.answer=== firstPresidentCloze.cloze){
+	    		if(answers.answer.toUpperCase()=== firstPresidentCloze.cloze){
 	    			console.log("That's right! Well Done!");
             console.log("---------------------------------------------------------------------------------------------");
 	    		}
@@ -196,7 +196,7 @@ inquirer.prompt([
          name:"answer"
         }
         ]).then(function(answers){
-          if(answers.answer=== currentPresidentCloze.cloze){
+          if(answers.answer.toUpperCase()=== currentPresidentCloze.cloze){
             console.log("That's right! Well Done!");
             console.log("---------------------------------------------------------------------------------------------");
 
@@ -218,7 +218,7 @@ inquirer.prompt([
          name:"answer"
         }
         ]).then(function(answers){
-          if(answers.answer=== leaderCloze.cloze){
+          if(answers.answer.toUpperCase()=== leaderCloze.cloze){
             console.log("That's right! Well Done!");
             console.log("---------------------------------------------------------------------------------------------");
 
@@ -240,7 +240,7 @@ inquirer.prompt([
          name:"answer"
         }
         ]).then(function(answers){
-          if(answers.answer=== dinosaurCloze.cloze){
+          if(answers.answer.toUpperCase()=== dinosaurCloze.cloze){
             console.log("That's right! Well Done!");
             console.log("---------------------------------------------------------------------------------------------");
 
